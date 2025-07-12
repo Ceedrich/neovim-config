@@ -1,16 +1,19 @@
 local opt = vim.opt
 
 vim.diagnostic.config({
-  virtual_text = true,
-  -- virtual_lines = true;
+	virtual_text = true,
+	-- virtual_lines = true;
 })
 
 opt.relativenumber = true
 opt.number = true
+opt.scrolloff = 5
+opt.sidescrolloff = 8
 
 -- tabs & indentation
 opt.tabstop = 2
 opt.shiftwidth = 2
+opt.softtabstop = 2
 opt.expandtab = true
 opt.autoindent = true
 opt.smartindent = true
