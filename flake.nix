@@ -57,6 +57,7 @@
               todo-comments-nvim
               comment-nvim
               none-ls-nvim
+              render-markdown-nvim
 
               # LSP
               nvim-lspconfig
