@@ -28,6 +28,7 @@ keymap.set({ "v", "n" }, "<C-x>", '"+x')
 -- Telescope
 do
 	local builtin = require("telescope.builtin")
+
 	wk.add({ "<leader>f", group = "Find" })
 	keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Fuzzy find files in cwd" })
 	keymap.set("n", "<leader>fs", builtin.live_grep, { desc = "Find string in cwd" })
