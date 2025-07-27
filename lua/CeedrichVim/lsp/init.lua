@@ -29,6 +29,9 @@ local on_attach = function(_, bufnr)
   opts.desc = "Code actinos"
   keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, opts)
 
+  opts.desc = "Go to References"
+  keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
+
   opts.desc = "Rename symbol"
   keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts)
 end
