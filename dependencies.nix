@@ -8,13 +8,9 @@ with pkgs; [
 
   # LSP
   lua-language-server
+  bash-language-server
   nixd
-  typescript-language-server
-  astro-language-server
-  tailwindcss
-  tailwindcss-language-server
   taplo
-  # rust-with-analyzer
   clang
   (rWrapper.override {
     packages = with rPackages; [
