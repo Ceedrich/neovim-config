@@ -6,6 +6,8 @@ with pkgs.vimPlugins; [
   nvim-web-devicons
   alpha-nvim
 
+  vimtex
+
   # Completion / Snippets
   luasnip
   nvim-cmp

@@ -6,6 +6,9 @@ with pkgs; [
   fd
   ripgrep
 
+  # LaTeX
+  texliveFull
+
   # LSP
   lua-language-server
   bash-language-server

@@ -1,0 +1,1 @@
+require("CeedrichVim.plugins.vimtex")
