@@ -101,6 +101,7 @@ vim.lsp.enable({
 	"htmx",
 	"java_language_server",
 	"svelte",
+	"texlab",
 })
 
 -- From https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls

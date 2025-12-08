@@ -20,6 +20,7 @@ with pkgs; [
       languageserver
     ];
   })
+  texlab
 
   # Formatters
   stylua
