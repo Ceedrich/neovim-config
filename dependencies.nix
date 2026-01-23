@@ -11,6 +11,8 @@ with pkgs; [
 
   # LSP
   lua-language-server
+  astro-language-server
+  vscode-json-languageserver
   bash-language-server
   nixd
   taplo
