@@ -13,7 +13,7 @@ pkgs: let
   '';
 
   extraPackages = import ./dependencies.nix pkgs;
-in rec {
+in {
   neovim = pkgs.neovim.override {
     configure = {
       customRC = extraConfig;
@@ -27,8 +27,5 @@ in rec {
       inherit extraConfig extraPackages;
       plugins = [ceedrichVimPlugin];
     };
-  };
-  nixosModule = {
-    programs.neovim.package = neovim;
   };
 }
