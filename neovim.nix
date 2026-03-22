@@ -1,5 +1,5 @@
 pkgs: let
-  ceedrichVim =
+  ceedrichVimPlugin =
     pkgs.vimUtils.buildVimPlugin
     {
       name = "CeedrichVim";
@@ -13,19 +13,22 @@ pkgs: let
   '';
 
   extraPackages = import ./dependencies.nix pkgs;
-in {
+in rec {
   neovim = pkgs.neovim.override {
     configure = {
       customRC = extraConfig;
-      packages.main = {start = [ceedrichVim];};
+      packages.main = {start = [ceedrichVimPlugin];};
     };
     extraMakeWrapperArgs = ''--suffix PATH : ${pkgs.lib.makeBinPath extraPackages}'';
   };
-  ceedrichVim = ceedrichVim;
+  ceedrichVim = ceedrichVimPlugin;
   hmModule = {
     programs.neovim = {
       inherit extraConfig extraPackages;
-      plugins = [ceedrichVim];
+      plugins = [ceedrichVimPlugin];
     };
+  };
+  nixosModule = {
+    programs.neovim.package = neovim;
   };
 }

@@ -22,6 +22,7 @@
           default = neovim.ceedrichVim;
         };
         homeModules.default = neovim.hmModule;
+        nixosModules.default = neovim.nixosModule;
       }
     );
 }
