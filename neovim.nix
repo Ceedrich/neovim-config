@@ -14,7 +14,9 @@ pkgs: let
 
   extraPackages = import ./dependencies.nix pkgs;
 in {
-  neovim = pkgs.neovim.override {
+  neovim = pkgs.wrapNeovim pkgs.neovim-unwrapped {
+    viAlias = true;
+    vimAlias = true;
     configure = {
       customRC = extraConfig;
       packages.main = {start = [ceedrichVimPlugin];};
