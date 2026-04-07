@@ -6,6 +6,8 @@ with pkgs.vimPlugins; [
   nvim-web-devicons
   alpha-nvim
 
+  vim-tmux-navigator
+
   vimtex
 
   # Completion / Snippets
