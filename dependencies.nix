@@ -23,6 +23,7 @@ with pkgs; [
     ];
   })
   texlab
+  github-ac 
 
   # Formatters
   stylua
