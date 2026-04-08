@@ -87,6 +87,7 @@ vim.lsp.enable({
 	"docker_compose_language_service",
 	"docker_language_server",
 	"dockerls",
+	"gh_actions_ls",
 	"glsl_analyzer",
 	"gopls",
 	"gradle_ls",
